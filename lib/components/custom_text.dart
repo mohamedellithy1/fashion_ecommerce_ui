@@ -6,6 +6,7 @@ class CustomText extends StatelessWidget {
   final Color color;
   final FontWeight fontWeight;
   final int maxLines;
+  final double spacing;
   final double hight;
   const CustomText({
     super.key,
@@ -13,6 +14,7 @@ class CustomText extends StatelessWidget {
     this.fontSize = 16,
     this.hight = 1,
     this.maxLines = 1,
+    this.spacing = 1,
     this.color = Colors.white,
     this.fontWeight = FontWeight.normal,
   });
@@ -26,6 +28,7 @@ class CustomText extends StatelessWidget {
       style: TextStyle(
         fontFamily: "Tenor_Sans",
         fontSize: fontSize,
+        letterSpacing: spacing,
         color: color,
         height: hight,
         fontWeight: fontWeight,
