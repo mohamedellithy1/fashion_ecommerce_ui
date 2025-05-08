@@ -5,6 +5,7 @@ import 'package:fashion_ecommerce_ui/core/app_colors.dart';
 import 'package:fashion_ecommerce_ui/components/custom_appbar.dart';
 import 'package:fashion_ecommerce_ui/models/cover_model.dart';
 import 'package:fashion_ecommerce_ui/models/product_model.dart';
+import 'package:fashion_ecommerce_ui/screens/checkout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -62,24 +63,40 @@ class HomeScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       final item = ProductModel.porducts;
 
-                      return Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(item[index].image),
-                          Gap(10),
-                          CustomText(text: item[index].name),
-                          Gap(6),
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder:
+                                  (context) => Checkout(
+                                    image: item[index].image,
+                                    description: item[index].description,
+                                    name: item[index].name,
+                                    price: item[index].price,
+                                  ),
+                            ),
+                          );
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(item[index].image),
+                            Gap(10),
+                            CustomText(text: item[index].name),
+                            Gap(6),
 
-                          CustomText(
-                            text: item[index].description,
-                            color: Colors.grey,
-                          ),
-                          Gap(6),
-                          CustomText(
-                            text: "\$ ${item[index].price.toString()}",
-                            color: Colors.red[700]!,
-                          ),
-                        ],
+                            CustomText(
+                              text: item[index].description,
+                              color: Colors.grey,
+                            ),
+                            Gap(6),
+                            CustomText(
+                              text: "\$ ${item[index].price.toString()}",
+                              color: Colors.red[700]!,
+                            ),
+                          ],
+                        ),
                       );
                     },
                   ),
