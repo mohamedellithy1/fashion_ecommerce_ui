@@ -143,29 +143,13 @@ class HomeScreen extends StatelessWidget {
                           color: Colors.black,
                         ),
                         Gap(20),
+
                         CustomText(
-                          text: "support@openui.design",
-                          fontSize: 20,
+                          maxLines: 3,
+                          text:
+                              "support@openui.design \n      +60 825 876     \n08:00 - 22:00 - Everyday",
                           color: Colors.black,
-                        ),
-                        Gap(10),
-                        CustomText(
-                          text: "+60 825 876",
-                          fontSize: 20,
-                          color: Colors.black,
-                        ),
-                        Gap(10),
-                        CustomText(
-                          text: "08:00 - 22:00 - Everyday",
-                          fontSize: 20,
-                          color: Colors.black,
-                        ),
-                        Gap(20),
-                        Image.asset(
-                          "assets/svcs/line.png",
-                          width: 190,
-                          color: Colors.black,
-                        ),
+                        ), // CustomText
                         Gap(10),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
