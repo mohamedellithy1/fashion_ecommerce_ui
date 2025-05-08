@@ -6,10 +6,12 @@ class CustomText extends StatelessWidget {
   final Color color;
   final FontWeight fontWeight;
   final int maxLines;
+  final double hight;
   const CustomText({
     super.key,
     required this.text,
     this.fontSize = 16,
+    this.hight = 1,
     this.maxLines = 1,
     this.color = Colors.white,
     this.fontWeight = FontWeight.normal,
@@ -19,12 +21,13 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+
       maxLines: maxLines,
       style: TextStyle(
         fontFamily: "Tenor_Sans",
         fontSize: fontSize,
         color: color,
-
+        height: hight,
         fontWeight: fontWeight,
       ),
     );

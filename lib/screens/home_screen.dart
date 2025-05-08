@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:fashion_ecommerce_ui/components/custom_text.dart';
 import 'package:fashion_ecommerce_ui/core/app_colors.dart';
 import 'package:fashion_ecommerce_ui/components/custom_appbar.dart';
@@ -113,61 +115,66 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Gap(20),
-                  Container(
-                    decoration: BoxDecoration(color: Colors.white),
-                    child: Column(
-                      children: [
-                        Gap(20),
-                        Row(
-                          spacing: 50,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              'assets/svcs/Twitter.svg',
-                              height: 35,
-                            ),
-                            SvgPicture.asset(
-                              'assets/svcs/Instagram.svg',
-                              height: 35,
-                            ),
-                            SvgPicture.asset(
-                              'assets/svcs/YouTube.svg',
-                              height: 35,
-                            ),
-                          ],
-                        ),
-                        Gap(20),
-                        Image.asset(
-                          "assets/svcs/line.png",
-                          width: 190,
-                          color: Colors.black,
-                        ),
-                        Gap(20),
+                  Column(
+                    children: [
+                      Gap(20),
+                      Row(
+                        spacing: 50,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            'assets/svcs/Twitter.svg',
+                            height: 35,
+                            color: Colors.white,
+                          ),
+                          SvgPicture.asset(
+                            'assets/svcs/Instagram.svg',
+                            height: 35,
+                            color: Colors.white,
+                          ),
+                          SvgPicture.asset(
+                            'assets/svcs/YouTube.svg',
+                            height: 35,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      Gap(20),
+                      Image.asset(
+                        "assets/svcs/line.png",
+                        width: 190,
+                        color: Colors.white,
+                      ),
+                      Gap(20),
 
-                        CustomText(
-                          maxLines: 3,
-                          text:
-                              "support@openui.design \n      +60 825 876     \n08:00 - 22:00 - Everyday",
-                          color: Colors.black,
-                        ), // CustomText
-                        Gap(10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          spacing: 30,
-                          children: [
-                            CustomText(text: "About", color: Colors.black),
-                            CustomText(text: "Contact", color: Colors.black),
-                            CustomText(text: "Blog", color: Colors.black),
-                          ],
-                        ),
-                        Gap(20),
-                        CustomText(
-                          text: "Copyright© OpenUI All Rights Reserved.",
-                          color: Colors.black,
-                        ),
-                        Gap(30),
-                      ],
-                    ),
+                      CustomText(
+                        maxLines: 3,
+                        hight: 2,
+                        text:
+                            "support@openui.design \n      +60 825 876     \n08:00 - 22:00 - Everyday",
+                      ), // CustomText
+                      Gap(10),
+                      Image.asset(
+                        "assets/svcs/line.png",
+                        width: 190,
+                        color: Colors.white,
+                      ),
+                      Gap(10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: 30,
+                        children: [
+                          CustomText(text: "About"),
+                          CustomText(text: "Contact"),
+                          CustomText(text: "Blog"),
+                        ],
+                      ),
+                      Gap(20),
+                      CustomText(
+                        text: "Copyright© OpenUI All Rights Reserved.",
+                      ),
+                      Gap(30),
+                    ],
                   ),
                 ],
               ),
